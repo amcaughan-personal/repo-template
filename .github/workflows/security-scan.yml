@@ -10,10 +10,10 @@ permissions:
 
 jobs:
   security:
-    uses: amcaughan-personal/shared_workflows/.github/workflows/security-scan.yml@2c8122a6fe3285aa21ed048aff5d713a69fd8539
+    uses: amcaughan-personal/shared_workflows/.github/workflows/security-scan.yml@2a217b1678e3b0394a365e593ca570a4b63c4e33
     permissions:
       contents: read
       pull-requests: write # to comment when there are findings
     with:
       # Add checkov if this repo gets infrastructure code (Terraform, Dockerfiles).
-      scans: "trivy, gitleaks, actionlint"
+      scans: '["trivy", "gitleaks", "actionlint"]'
