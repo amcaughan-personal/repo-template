@@ -1,0 +1,4 @@
+# Tools this repo needs, one per line, installed by mise in the dev container (and on your
+# machine, if you use mise there). For example:
+#   terraform 1.17.2
+# For Python projects, set the Python version in .python-version instead (uv and CI read it).

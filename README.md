@@ -6,6 +6,13 @@ One or two sentences: what this is, and why it exists.
 
 ## Development
 
+## Development environment
+
+Open the repo in its dev container (VS Code: *Reopen in Container*). It's the org's base
+image (Ubuntu, AWS CLI, [mise](https://mise.jdx.dev)) plus the tools listed in
+`.tool-versions`; add tools there as the repo needs them. Python projects also set
+`.python-version`.
+
 ## Checks
 
 Every pull request runs the org's shared security scan: leaked secrets (gitleaks),
