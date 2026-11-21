@@ -1,0 +1,22 @@
+{
+  "name": "${localWorkspaceFolderBasename}",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "runArgs": ["--hostname", "${localWorkspaceFolderBasename}"],
+  "remoteUser": "dev",
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "mounts": [
+    "source=${localEnv:HOME}/.aws,target=/home/dev/.aws,type=bind"
+  ],
+  "remoteEnv": {
+    "AWS_PROFILE": "default"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  }
+}
