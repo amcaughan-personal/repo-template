@@ -15,5 +15,4 @@ jobs:
       contents: read
       pull-requests: write # to comment when there are findings
     with:
-      # Add checkov if this repo gets infrastructure code (Terraform, Dockerfiles).
-      scans: "trivy, gitleaks, actionlint"
+      scans: "checkov, trivy, gitleaks, actionlint"
